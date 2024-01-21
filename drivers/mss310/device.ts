@@ -51,19 +51,7 @@ class MyDevice extends Homey.Device {
         console.log('Device with name: ' + deviceDef.devName + ' and id: ' + deviceId);
 
         if (deviceId === this.getData().id) {
-          //console.log('Found correct device: ' + deviceId);
-          var thisDevice = device;
-          //console.log('Device found with def: ' + JSON.stringify(deviceDef));
-          //console.log(device)
           this.thisDevice = device
-          
-          setTimeout(() => {
-            console.log('ToggleXing...');
-            device.controlToggleX(1, false, (err:string, res:any) => {
-                console.log('Toggle Response: err: ' + err + ', res: ' + JSON.stringify(res));
-            });
-          }, 2000);
-
         }
 
       });
